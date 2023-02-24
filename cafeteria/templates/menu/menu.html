@@ -1,0 +1,92 @@
+{% extends 'index.html' %} {% load static %} {% block content %}
+<div class="menu">
+  <div class="circle-right"></div>
+  <div class="circle-left"></div>
+  <div class="sect-wrapper">
+    <div class="sect-container" id="food">
+      <div class="section">
+        <h2>Entrantes</h2>
+        <p>Ensalada mixta - $10</p>
+        <p>Calamares fritos - $12</p>
+        <p>Patatas bravas - $8</p>
+      </div>
+      <div class="section">
+        <h2>Platos principales</h2>
+        <div class="subsection">
+          <h3>Carnes</h3>
+          <p>Filete de ternera - $25</p>
+          <p>Pollo al horno - $20</p>
+          <p>Cordero a la parrilla - $28</p>
+        </div>
+        <div class="subsection">
+          <h3>Pescados</h3>
+          <p>Salmón a la plancha - $22</p>
+          <p>Bacalao al pil-pil - $24</p>
+        </div>
+        <div class="subsection">
+          <h3>Vegetarianos</h3>
+          <p>Pasta con verduras - $18</p>
+          <p>Berenjenas rellenas - $16</p>
+        </div>
+      </div>
+      <div class="section">
+        <h2>Postres</h2>
+        <p>Tarta de queso - $8</p>
+        <p>Flan casero - $6</p>
+        <p>Helado - $5</p>
+      </div>
+    </div>
+    <div class="sect-container" id="pizza">
+      <div class="section">
+        <h2>Pizzas</h2>
+          <p>Pizza de queso - $25</p>
+          <p>Pizza de jamon - $20</p>
+          <p>Pizza de cebolla - $28</p>
+          <p>Pizza de camaron - $22</p>
+          <p>Pizza hawaiana - $24</p>
+          <p>Pizza mixta - $18</p>
+      </div>
+      <div class="section">
+        <h2>Cremas</h2>
+          <p>Crema de queso - $25</p>
+          <p>Crema aurora - $20</p>
+          <p>Crema de jamon - $28</p>
+          <p>Crema virginia - $22</p>
+      </div>
+      <div class="section">
+        <h2>Lasagna</h2>
+          <p>Lasagna de queso - $25</p>
+          <p>Lasagna de jamon - $20</p>
+          <p>Lasagna de picadillo - $28</p>
+          <p>Lasagna mixta - $22</p>
+      </div>
+    </div>
+    <div class="sect-container" id="drink">
+      <div class="section">
+        <h2>Bebidas</h2>
+        <div class="subsection">
+          <h3>Jugos naturales</h3>
+          <p>Filete de ternera - $25</p>
+          <p>Pollo al horno - $20</p>
+          <p>Cordero a la parrilla - $28</p>
+        </div>
+        <div class="subsection">
+          <h3>Importadas</h3>
+          <p>Salmón a la plancha - $22</p>
+          <p>Bacalao al pil-pil - $24</p>
+        </div>
+        <div class="subsection">
+          <h3>Nacionales</h3>
+          <p>Pasta con verduras - $18</p>
+          <p>Berenjenas rellenas - $16</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ul class="sci-menu">
+    <li><a href="#food"><img src="{% static 'img/food.png' %}" alt=""></a></li>
+    <li><a href="#pizza"><img src="{% static 'img/pizza.png' %}" alt=""></a></li>
+    <li><a href="#drink"><img src="{% static 'img/drink.png' %}" alt=""></a></li>
+</ul>
+</div>
+{% endblock content %}
