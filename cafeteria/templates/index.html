@@ -10,52 +10,19 @@
 </head>
 <body>
     <section>
-        <div class="circle"></div>
         <header>
             <a href="#"><img src="{% static 'img/logo.png' %}" class="logo" alt=""></a>
             <div onclick="toggleMenu()" class="toggle"></div>
             <ul class="navigation">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'menu' %}">Menu</a></li>
                 <li><a href="#">What's New</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </header>
-        <div class="content">
-            <div class="textBox">
-                <h2>It's not just Coffee <br> It's <span>Starbucks</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore 
-                    magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                <a href="#">Learn More</a>
-            </div>
-            <div class="imgBox">
-                <img src="{% static 'img/img1.png' %}" alt="" class="starbucks">
-            </div>
-        </div>
-        <ul class="thumb">
-            <li><img src="{% static 'img/thumb1.png' %}" onclick="imgSlider('{% static 'img/img1.png' %}'); changeCircleColor('#017143')" alt=""></li>
-            <li><img src="{% static 'img/thumb2.png' %}" onclick="imgSlider('{% static 'img/img2.png' %}'); changeCircleColor('#eb7495')" alt=""></li>
-            <li><img src="{% static 'img/thumb3.png' %}" onclick="imgSlider('{% static 'img/img3.png' %}'); changeCircleColor('#d752b1')" alt=""></li>
-        </ul>
-        <ul class="sci">
-            <li><a href="#"><img src="{% static 'img/facebook.png' %}" alt=""></a></li>
-            <li><a href="#"><img src="{% static 'img/twitter.png' %}" alt=""></a></li>
-            <li><a href="#"><img src="{% static 'img/instagram.png' %}" alt=""></a></li>
-        </ul>
+        {% block content %}{% endblock content %}
     </section>
-
     <script>
-        function imgSlider(anything) {
-            document.querySelector('.starbucks').src = anything;
-        }
-
-        function changeCircleColor(color) {
-            const circle = document.querySelector('.circle');
-            circle.style.background = color;
-        }
-
         function toggleMenu() {
             var menuToggle = document.querySelector('.toggle');
             var navigation = document.querySelector('.navigation');
